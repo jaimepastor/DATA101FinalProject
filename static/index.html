@@ -1,29 +1,76 @@
-<html>
-    <head>
-        <script src="https://d3js.org/d3.v6.min.js"></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand|Roboto">
-    </head>
-    <body>
-        <div id="breadcrumb">
-            <span id="about"> About </span>
-            <span id="history"> History </span>
-            <span id="tradelinkages"> Trade Linkages </span>
-            <span id="topcomm"> Top Commodities</span>
-        </div>
-        <div id="container1">
-            <div id="chart1">
 
-            </div>
-        </div>
-        <div id="container2">
-            <div id="chart2">
+<meta name="robots" content="noindex">
 
-            </div>
-        </div>
-        <div id="container3">
-            <div id="chart3">
+<!--Introduction-->
 
-            </div>
-        </div>
-    </body>
-</html>
+<h2>Introduction</h2>
+<p>With the motto “One Vision. One Identity. One Community.,”  Association of Southeast Asian Nations or ASEAN was founded in 1967 by the first 5 nations-- Indonesia, Malaysia, the Philippines, Singapore, and Thailand with the purpose of accelerating economic growth, cultural development, and promoting peace within the region through collaboration, cooperation, and mutual assistance within the nations. ASEAN has now expanded to include 5 more nations--Brunei, Cambodia, Laos, Myanmar, and Vietnam. To further economic development, they have established the ASEAN Free Trade Agreement, ASEAN Trade in Goods Agreement, Agreement in Customs, and the ASEAN Economic Community.</p>
+<br>
+
+<p>The ASEAN trading bloc has garnered plenty of attention around the world due to the region's impressive economic growth. According to the 2019 ASEAN Integration Report, ASEAN collectively has a GDP of around $3 trillion, which would place the bloc as the world's sixth largest economy. Commonly credited with its rapid economic growth is its rich trade linkages with the world.
+<br>
+<br>
+This project aims to shed light on ASEAN trade, specifically on the development of Intra-ASEAN trade, linkages in trade between ASEAN member states and outside partners, and the type of goods traded within and outside ASEAN. 
+</p>
+
+
+<hr>
+
+<!--Intra-ASEAN Trade-->
+
+<h2>Development in Intra-ASEAN Trade Intensity</h2>
+<p>Trade linkages among ASEAN member states remain relatively weak compared to other regional economic unions, despite the elimination of tariffs under the ASEAN Free Trade Agreement (AFTA). From 2003 to 2019, the level of intra-ASEAN trade has remained relatively stagnant, which shows that ASEAN has not sufficiently fostered trade relations between ASEAN member states. </p>
+
+<hr>
+
+<!--Trade Linkages-->
+
+<h2>Extra-ASEAN and Intra-ASEAN Trade Linkages</h2>
+<p>One of the goals of ASEAN is to form a singular production base, and integrate the region with global production networks.The chord diagram below highlights the magnitude of trade in 2019 between ASEAN member countries and their largest extra-ASEAN trading partners: (1) the European Union, (2) the United States, (3) Japan,  (4) South Korea, and (5) China. While those countries not specified were aggregated into Rest of the World (RoW). 
+ <br><br>
+ Each of the arcs show the total value of exports of one country to another. The width of the flows at the border of the arc show the total value of exports flowing from one country to another. Meanwhile, the color of the flows indicate which country is the net exporter of goods in bilateral trade.  
+ <br><br>
+  As can be seen, ASEAN member-states tend to have a higher value of trade with non-ASEAN nations. Though what is interesting is that ASEAN states tend to be net exporters to their non-ASEAN counterparts. The primary exception is Chia, which appears to be a net exporter to all ASEAN member states except Singapore.
+</p>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+<div id="chart"></div>
+<div id="tooltip"></div>
+
+<hr>
+
+<!--Top Commodities-->
+
+<h2>Top Commodities Traded Outside ASEAN</h2>
+<p>Knowing what types of goods are traded by the ASEAN bloc helps in analyzing trade relations between these countries. By doing readers can understand the ASEAN bloc's trade strucure. Included below are the collective statistics on total trade (imports +exports), exports, and imports of the ASEAN bloc.
+<br>
+<br>
+For this section, trade is measured in millions dollars. Commodities were arranged in terms of their 2-digit Harmonzed System Code. HS codes are an internationally standardized system of names and numbers to classify traded products. In this case, HS codes denotes the set of goods which fall under a single category. For instance, code 85 includes all kinds of electrical machinery and their respective components.
+<br>
+<br>
+As it stands, ASEAN mostly engages in trade with code 85, 84, and 27 products. The order of volume among these sectors remains the same when specifying imports and exports, indicating strong intra-industry trade. This implies strong intra-industry trade between ASEAN and its external partners. In the context of extra-ASEAN relatons, strong intra-industry relations practically means that goods for the the same industry are processed in ASEAN--either through refinement or assembly--and then exported outside ASEAN for further refinement, or as a final product.
+
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<div id="ExtraASEAN"></div>
+<button onclick="update2('Total Trade')">Total Extra-ASEAN Trade</button>
+<button onclick="update2('Export')">Extra-ASEAN Exports</button>
+<button onclick="update2('Import')">Extra-ASEAN Imports</button>
+<hr>
+
+<h2>Top Commodities Traded Inside ASEAN</h2>
+<p>The top commodities traded within ASEAN also belong to the same category traded outside ASEAN. This could mean that goods flow within the ASEAN bloc for processing and assembly, which are then exported abroad for further refinement or as a final product.</p>
+
+
+<div id="IntraASEAN"></div>
+<button onclick="update('Total Trade')">Total Intra-ASEAN Trade</button>
+<button onclick="update('Export')">Intra-ASEAN Exports</button>
+<button onclick="update('Import')">Intra-ASEAN Imports</button>
+
+
+
