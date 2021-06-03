@@ -19,7 +19,7 @@ The bar charts showcase the top 5 commodities, marked by their 2-digit HS code, 
 
 **Running the project**
 
-To run the project, simply download "*ASEAN Trade Linkages.html*"  and run it with your preferred browser. No other set-ups are required, as the project was constructed via d3.
+To run the project, simply open "*ASEAN Trade Linkages.html*"  and run it with your preferred browser. No other set-ups are required, as the project was constructed via d3.
 
 **Replicating or playing with the project code**
 
